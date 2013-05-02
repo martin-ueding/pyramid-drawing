@@ -1,0 +1,298 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      8390,        288]
+NotebookOptionsPosition[      7207,        240]
+NotebookOutlinePosition[      7542,        255]
+CellTagsIndexPosition[      7499,        252]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"a", "=", 
+  RowBox[{"Quantity", "[", 
+   RowBox[{"20", ",", "\"\<CentiMeter\>\""}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.576514731431628*^9, 3.5765147485063133`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"20"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, 
+       StyleBox["\"cm\"", "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: centimeters"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", "\"Centimeters\""}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.5765147579138737`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"phi", "=", 
+  RowBox[{
+   RowBox[{"51", "/", "180"}], "*", "Pi"}]}]], "Input",
+ CellChangeTimes->{{3.576514762248335*^9, 3.57651477102509*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"17", " ", "\[Pi]"}], "60"]], "Output",
+ CellChangeTimes->{3.57651477295142*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"height", "=", 
+  RowBox[{"a", " ", 
+   RowBox[{
+    RowBox[{"Tan", "[", "phi", "]"}], "/", "2"}]}]}]], "Input",
+ CellChangeTimes->{{3.5765148283016644`*^9, 3.576514837950019*^9}, {
+  3.57651489987255*^9, 3.5765149459961*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{RowBox[{"10", " ", 
+     RowBox[{"Cot", "[", 
+       FractionBox[
+        RowBox[{"13", " ", "\[Pi]"}], "60"], "]"}]}]},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, 
+       StyleBox["\"cm\"", "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: centimeters"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", "\"Centimeters\""}], "]"}]& )]], "Output",
+ CellChangeTimes->{{3.576514902517563*^9, 3.5765149464759483`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"sideheight", "=", 
+  RowBox[{"Sqrt", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"a", "/", "2"}], ")"}], "^", "2"}], "+", 
+    RowBox[{"height", "^", "2"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.576514961870956*^9, 3.576514978608696*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{SqrtBox[
+    RowBox[{"100", "+", 
+      RowBox[{"100", " ", 
+        SuperscriptBox[
+         RowBox[{"Cot", "[", 
+           FractionBox[
+            RowBox[{"13", " ", "\[Pi]"}], "60"], "]"}], "2"]}]}]]},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, 
+       StyleBox["\"cm\"", "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: centimeters"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", "\"Centimeters\""}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.57651497947064*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"area", " ", "=", 
+  RowBox[{
+   RowBox[{"a", "^", "2"}], " ", "+", " ", 
+   RowBox[{"4", " ", "*", "a", "*", 
+    RowBox[{"sideheight", "/", "2"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.5765147776111937`*^9, 3.5765148030380297`*^9}, {
+  3.5765149832644253`*^9, 3.576514985203372*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{RowBox[{"(", 
+     RowBox[{"400", "+", 
+       RowBox[{"40", " ", 
+         SqrtBox[
+          RowBox[{"100", "+", 
+            RowBox[{"100", " ", 
+              SuperscriptBox[
+               RowBox[{"Cot", "[", 
+                 FractionBox[
+                  RowBox[{"13", " ", "\[Pi]"}], "60"], "]"}], "2"]}]}]]}]}], 
+     ")"}]},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, 
+       StyleBox[
+        RowBox[{
+          SuperscriptBox["\"cm\"", "2"]}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: centimeters squared"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", 
+       SuperscriptBox["\"Centimeters\"", "2"]}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.5765149859000683`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"UnitConvert", "[", "area", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.576514987817164*^9, 3.576515035037224*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"0.10356062916262998`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, 
+       StyleBox[
+        RowBox[{
+          SuperscriptBox["\"m\"", "2"]}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: meters squared"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", 
+       SuperscriptBox["\"Meters\"", "2"]}], "]"}]& )]], "Output",
+ CellChangeTimes->{
+  3.576514991839093*^9, {3.5765150249269*^9, 3.576515036657119*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"UnitConvert", "[", "height", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.576515135665287*^9, 3.576515136137642*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"0.12348971565350514`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, 
+       StyleBox["\"m\"", "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: meters"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", "\"Meters\""}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.5765151367147818`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"UnitConvert", "[", "sideheight", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.576515502050803*^9, 3.5765155025088253`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"0.15890157290657494`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, 
+       StyleBox["\"m\"", "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: meters"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", "\"Meters\""}], "]"}]& )]], "Output",
+ CellChangeTimes->{3.576515502966178*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"a", "*", 
+    RowBox[{"sideheight", "/", "2"}], "*", 
+    RowBox[{"100", "^", "2"}]}], "//", "UnitConvert"}], "//", "N"}]], "Input",\
+
+ CellChangeTimes->{{3.5765158954004517`*^9, 3.5765159185326567`*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"158.90157290657493`"},
+  "QuantityUnit",
+  DisplayFunction->(TooltipBox[
+    StyleBox[
+     RowBox[{#, 
+       StyleBox[
+        RowBox[{
+          SuperscriptBox["\"m\"", "2"]}], "QuantityUnitTraditionalLabel"]}], 
+     ShowStringCharacters -> False], "Unit: meters squared"]& ),
+  InterpretationFunction->(RowBox[{"Quantity", "[", 
+     RowBox[{#, ",", 
+       SuperscriptBox["\"Meters\"", "2"]}], "]"}]& )]], "Output",
+ CellChangeTimes->{{3.5765159001984167`*^9, 3.576515919281433*^9}}]
+}, Open  ]]
+},
+WindowSize->{740, 811},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"9.0 for Linux x86 (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 194, 4, 32, "Input"],
+Cell[776, 28, 400, 10, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1213, 43, 167, 4, 32, "Input"],
+Cell[1383, 49, 118, 3, 49, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1538, 57, 249, 6, 32, "Input"],
+Cell[1790, 65, 538, 13, 49, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2365, 83, 287, 8, 32, "Input"],
+Cell[2655, 93, 597, 16, 62, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3289, 114, 308, 7, 32, "Input"],
+Cell[3600, 123, 817, 23, 65, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4454, 151, 161, 3, 32, "Input"],
+Cell[4618, 156, 540, 14, 34, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5195, 175, 163, 3, 32, "Input"],
+Cell[5361, 180, 407, 10, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5805, 195, 169, 3, 32, "Input"],
+Cell[5977, 200, 405, 10, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6419, 215, 251, 7, 32, "Input"],
+Cell[6673, 224, 518, 13, 34, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
